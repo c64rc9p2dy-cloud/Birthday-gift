@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0614;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Background Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(147, 51, 234, 0.15) 0%, rgba(13, 6, 20, 0.8) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 20px 40px;
+}
+
+.birthday {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #f472b6;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #d1d5db;
+    font-weight: 300;
+}
+
+/* Counter Section */
+.counter-section {
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ec4899;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px 20px;
+    min-width: 130px;
+    flex: 1;
+    max-width: 180px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.emoji {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card h1 {
+    font-size: 2.5rem;
+    color: #f43f5e;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Message Section */
+.message {
+    padding: 60px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 2;
+    font-size: 1.2rem;
+    color: #e5e7eb;
+}
+
+.message .fade {
+    margin-bottom: 20px;
+}
+
+/* Heart Animation */
+.heart-section {
+    padding: 40px 20px;
+}
+
+.heart {
+    background-color: #f43f5e;
+    display: inline-block;
+    height: 50px;
+    margin: 0 10px;
+    position: relative;
+    transform: rotate(-45deg);
+    width: 50px;
+    margin-bottom: 40px;
+    animation: pulse 1.2s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: #f43f5e;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.2); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
+
+.heart-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.heart-section p {
+    font-size: 1.5rem;
+    color: #f472b6;
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Ending Section */
+.ending {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, transparent 0%, rgba(244, 63, 94, 0.05) 100%);
+}
+
+.ending h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+.ending h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .birthday { font-size: 2.8rem; }
+    .name { font-size: 2rem; }
+    .cards { gap: 10px; }
+    .card { min-width: 40%; }
+}
